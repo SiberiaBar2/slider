@@ -2,11 +2,11 @@
 // import './App.css';
 
 
-import Soliders from '../src/pages/Soliders/Soliders'
+import Index from '../src/pages/index'
 function App() {
   return (
     <div className="App">
-      <Soliders/>
+      <Index/>
     </div>
   );
 }
