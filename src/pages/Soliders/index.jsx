@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Slider, Button  } from 'antd';
+import { Slider, Button } from 'antd';
 import cxs from 'classnames'
-import moment from 'moment'
+import * as moment from 'moment'
 import { getArray } from '../utils/getArray'
 import './solider.css'
 
@@ -17,7 +17,7 @@ const speed = 2000
  * 理清链路，比什么都重要，链路清晰没有废话，是一个真正工程师的标准！
  */
 
-function Soliders() {
+const Soliders = () => {
   let timer = null
   const [moveIndex, setChangeMoveIndex] = useState(0)
   const [switchOpen, setSwitchOpen] = useState(false)
@@ -30,7 +30,7 @@ function Soliders() {
   }, [moveIndex]);
 
   useEffect(() => {
-    if(moveIndex === timePoints - 1){
+    if (moveIndex === timePoints - 1) {
       setSwitchOpen(true)
     }
   }, [moveIndex]);
@@ -80,9 +80,9 @@ function Soliders() {
 
   const startButton = () => {
     setSwitchOpen(false)
-    console.log("moveIndex === timePoints",moveIndex ,timePoints)
+    // console.log("moveIndex === timePoints",moveIndex ,timePoints)
     if (moveIndex === timePoints - 1) {
-      console.log('afafafafafsaafa')
+      // console.log('afafafafafsaafa')
       setChangeMoveIndex(0)
       // currentIndexAutoMove()
     } else {
@@ -104,16 +104,11 @@ function Soliders() {
         onAfterChange={(value) => sliderChange(value)}
       />
       {!switchOpen
-        ? <Button type="dashed"
-          onClick={susPendButton} >
-          暂停
-        </Button>
-        : <Button
+        ? (<Button type="dashed"
+          onClick={susPendButton} >暂停</Button>)
+        : (<Button
           style={{ background: 'green', color: 'red' }}
-          onClick={startButton} >
-          开始
-        </Button>}
-
+          onClick={startButton} >开始</Button>)}
     </div>
   )
 }

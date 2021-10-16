@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.svgwarp {
+  height: 100%;
+}
+.svgwarp .tips {
+  padding: 5px 16px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  line-height: 70px;
+}
+.svgwarp .tips p {
+  margin: 0;
+}
+.svgwarp .svg-edit {
+  width: 500px;
+  height: calc(100% - 80px);
+  margin-left: 16px;
+}
+.svgwarp .svg-edit .svg-draw {
+  height: 250px;
+}
+.svgwarp .svg-edit .svg-main {
+  background: #FFFFFF;
+}
+.svgwarp .svg-edit .svg-main .svg-tablist {
+  display: flex;
+  padding: 12px 16px;
+}
+.svgwarp .svg-edit .svg-main .svg-tablist .tablist-item {
+  width: 86px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  color: black;
+  background: #ccc;
+  border: 1px solid black;
+  border-left: none;
+}
+.svgwarp .svg-edit .svg-main .svg-tablist .tablist-item:nth-child(1) {
+  border-left: 1px solid black !important;
+}
+.svgwarp .svg-edit .svg-main .svg-tablist .activetab {
+  border-bottom: none;
+  background: #FFFFFF;
+}
+.svgwarp .svg-edit .svg-main .form-basic {
+  height: calc(100vh - 457px);
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.svgwarp .svg-edit .svg-main .form-basic .formitem-list {
+  margin-right: 170px;
+}
+.svgwarp .svg-edit .svg-main .form-basic .form-item {
+  margin-bottom: 8px;
+}
+.svgwarp .svg-edit .svg-main .form-basic .opera {
+  display: flex;
+  justify-content: space-between;
+}
+.svgwarp .svg-edit .svg-main .form-basic .opera .operatwo .ant-btn:nth-child(2) {
+  margin-left: 8px;
+}
+.svgwarp .svg-edit .svg-main .form-basic .opera .ant-btn {
+  width: 86px;
+  height: 32px;
+  color: black !important;
+  margin: 0;
+  border-radius: 0;
+}
+.svgwarp .svg-edit .svg-main .form-common {
+  width: 100%;
+  height: calc(100vh - 457px);
+  padding: 0 16px;
+}
+.svgwarp .svg-edit .svg-main .form-common .ant-table-thead {
+  font-size: 12px;
+}
+.svgwarp .svg-edit .svg-main .form-common .ant-table-thead > tr > th {
+  padding: 10px 16px;
+}
+.svgwarp .svg-edit .svg-main .form-common .ant-table-placeholder {
+  display: none;
+}
+.svgwarp .svg-edit .svg-main .form-common .color-wrap {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ccc;
+  padding: 9px;
+}
+.svgwarp .svg-edit .svg-main .form-common .color-wrap .color-center {
+  height: 100%;
+}
+.svgwarp .svg-edit .svg-main .form-common .icon-delete {
+  font-size: 20px;
+}
+.svgwarp .svg-edit .svg-main .form-common .ant-table-cell {
+  padding: 12px 16px;
+}
+.svgwarp .svg-edit .svg-main .form-common .ant-btn {
+  color: black !important;
+  margin: 0;
+  width: 100% !important;
+  margin-top: 8px;
+  border-radius: 0;
+}
+.svgwarp .svg-edit .svg-main .form-common .ant-btn > .anticon {
+  font-size: 13px;
+}
+.svgwarp .svg-edit .svg-main .common-select {
+  width: 170px;
+}
+.svgwarp .svg-edit .svg-main .more-choose {
+  width: 100%;
+}
+.svgwarp .svg-edit .svg-main .more-choose .ant-select-selector {
+  height: 60px;
+}
+.svgwarp .ant-btn {
+  color: #FFFFFF !important;
+  font-size: 12px;
+  width: 86px;
+  height: 32px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-left: 20px;
+}
+.svgwarp .graph-list {
+  display: flex;
+}
+.svgwarp .graph-list .graph-item {
+  width: 86px;
+  height: 86px;
+  border: 1px solid orange;
+  background: #ccc;
+  margin: 0 8px 8px 0;
+}
+.svgwarp .graph-list .graph-item svg {
+  width: 100%;
+  height: 100%;
+}
+.svgwarp .graph-list .graph-item:hover {
+  border-color: skyblue;
+}

@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import Soliders from './Soliders/Soliders'
+import Soliders from './Soliders/index'
 import Autosearch from './Autosearch/Autosearch'
-
+import SvgEditor from './SvgEditor/index'
+import DemoTest from './DemoTest/index'
 import cx from 'classnames'
 import './index.css'
 import {
   timeLineKey,
   othersTab,
-  autoSearch
+  autoSearch,
+  svg,
+  test,
 } from '../constant/index'
 
 const tabKeys = [
@@ -22,6 +25,14 @@ const tabKeys = [
   {
     key: autoSearch,
     label: 'antd自动完成'
+  },
+  {
+    key: svg,
+    label: 'svg编辑器'
+  },
+  {
+    key: test,
+    label: 'test'
   }
 ]
 
@@ -48,8 +59,30 @@ function Index() {
   const renderAutoSearch = () => {
     return (
       <div className={cx('content-center')}>
-        <Autosearch />
+        <div className={cx('content-center-item')}>
+          <Autosearch data={[]} />
+        </div>
       </div>
+    )
+  }
+
+  const renderSvgEditor = () => {
+    return (
+      <div className={cx('content-center')}>
+        {/* <div className={cx('content-center-item')}> */}
+        <SvgEditor width={'200'} />
+        {/* </div> */}
+      </div>
+    )
+  }
+
+  const renderTest = () => {
+    return (
+      <div className={cx('content-center')}>
+      {/* <div className={cx('content-center-item')}> */}
+      <DemoTest/>
+      {/* </div> */}
+    </div>
     )
   }
 
@@ -57,13 +90,15 @@ function Index() {
     if (currentTabKey === timeLineKey) return renderTimeLine()
     if (currentTabKey === othersTab) return renderOthers()
     if (currentTabKey === autoSearch) return renderAutoSearch()
+    if (currentTabKey === svg) return renderSvgEditor()
+    if(currentTabKey === test) return renderTest()
   }
 
   const changeTab = (v) => {
     setCurrentTabKey(v.key)
   }
 
-
+  // when ever , no never giveup ,because the life only  have challenge can make me happy , do not ？
 
 
   return (
